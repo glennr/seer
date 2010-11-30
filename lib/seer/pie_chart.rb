@@ -34,7 +34,12 @@ module Seer
     include Seer::Chart
 
     # Chart options accessors
-    attr_accessor :background_color, :border_color, :enable_tooltip, :focus_border_color, :height, :is_3_d, :legend, :legend_background_color, :legend_font_size, :legend_text_color, :pie_join_angle, :pie_minimal_angle, :title, :title_x, :title_y, :title_color, :title_font_size, :tooltip_font_size, :tooltip_height, :tooltip_width, :width
+    attr_accessor :background_color, :border_color, :enable_tooltip,
+                  :focus_border_color, :height, :is_3_d, :legend,
+                  :legend_background_color, :legend_font_size, :legend_text_color,
+                  :pie_join_angle, :pie_minimal_angle, :title, :title_x,
+                  :title_y, :title_color, :title_font_size, :tooltip_font_size,
+                  :tooltip_height, :tooltip_width, :width
 
     # Graph data
     attr_accessor :data, :data_method, :data_table, :label_method
@@ -73,11 +78,14 @@ module Seer
     end
 
     def nonstring_options #:nodoc:
-      [:colors, :enable_tooltip, :height, :is_3_d, :legend_font_size, :pie_join_angle, :pie_minimal_angle, :title_font_size, :tooltip_font_size, :tooltip_width, :width]
+      [:colors, :enable_tooltip, :height, :is_3_d, :legend_font_size,
+        :pie_join_angle, :pie_minimal_angle, :title_font_size, :tooltip_font_size,
+        :tooltip_width, :width]
     end
 
     def string_options #:nodoc:
-      [:background_color, :border_color, :focus_border_color, :legend, :legend_background_color, :legend_text_color, :title, :title_color]
+      [:background_color, :border_color, :focus_border_color, :legend,
+        :legend_background_color, :legend_text_color, :title, :title_color]
     end
 
     def to_js #:nodoc:
