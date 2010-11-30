@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{seer}
-  s.version = "0.9.1"
+  s.name = %q{glennr-seer}
+  s.version = "0.9.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Corey Ehmke / SEO Logic"]
-  s.date = %q{2010-09-08}
+  s.authors = ["Corey Ehmke / SEO Logic", "Glenn Roberts / Siyelo"]
+  s.date = %q{2010-11-30}
   s.description = %q{ Seer is a lightweight, semantically rich wrapper for the Google Visualization API. It allows you to easily create a visualization of data in a variety of formats, including area charts, bar charts, column charts, gauges, line charts, and pie charts.}
-  s.email = %q{corey@seologic.com}
+  s.email = %q{glenn.roberts@siyelo.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/Bantik/seer}
+  s.homepage = %q{http://github.com/glennr/seer}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}

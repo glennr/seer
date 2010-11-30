@@ -8,9 +8,9 @@ module Seer
   require 'seer/geomap'
   require 'seer/line_chart'
   require 'seer/pie_chart'
-  
+
   VISUALIZERS = [:area_chart, :bar_chart, :column_chart, :gauge, :geomap, :line_chart, :pie_chart]
-  
+
   def self.valid_hex_number?(val) #:nodoc:
     return false unless val.is_a?(String) && ! val.empty?
     ! (val =~ /^\#([0-9]|[a-f]|[A-F])+$/).nil? && val.length == 7
@@ -18,6 +18,11 @@ module Seer
 
   def self.log(message) #:nodoc:
     RAILS_DEFAULT_LOGGER.info(message)
+  end
+
+  # gifted from ActionView::Helpers::JavaScriptHelper
+  def self.options_for_javascript(options)
+    '{' + options.map {|k, v| "#{k}:\"#{v}\""}.sort.join(', ') + '}'
   end
 
   def self.init_visualization
@@ -28,7 +33,7 @@ module Seer
     </script>
     }
   end
-  
+
   def self.visualize(data, args={})
     raise ArgumentError, "Seer: Invalid visualizer: #{args[:as]}" unless args[:as] && VISUALIZERS.include?(args[:as])
     raise ArgumentError, "Seer: No data provided!" unless data && ! data.empty?
@@ -36,19 +41,19 @@ module Seer
   end
 
   private
-  
+
   def self.area_chart(data, args)
     AreaChart.render(data, args)
   end
-  
+
   def self.bar_chart(data, args)
     BarChart.render(data, args)
   end
-  
+
   def self.column_chart(data, args)
     ColumnChart.render(data, args)
   end
-  
+
   def self.gauge(data, args)
     Gauge.render(data, args)
   end
@@ -64,5 +69,5 @@ module Seer
   def self.pie_chart(data, args)
     PieChart.render(data, args)
   end
-  
+
 end
