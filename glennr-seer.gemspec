@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{glennr-seer}
-  s.version = "0.9.2"
+  s.version = "0.9.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Corey Ehmke / SEO Logic", "Glenn Roberts / Siyelo"]
-  s.date = %q{2010-11-30}
+  s.date = %q{2010-12-13}
   s.description = %q{ Seer is a lightweight, semantically rich wrapper for the Google Visualization API. It allows you to easily create a visualization of data in a variety of formats, including area charts, bar charts, column charts, gauges, line charts, and pie charts.}
   s.email = %q{glenn.roberts@siyelo.com}
   s.extra_rdoc_files = [
